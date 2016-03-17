@@ -1,0 +1,16 @@
+extends ./layout.jade
+
+//  block content --  lets jade know that any page extending the layout, can inject html here
+block content
+    section.post
+      .container
+        .row
+          .col-lg-8.col-lg-offset-2.text-center
+            h2.section-heading #{post.title}
+            
+            hr.light
+            
+            p.text-faded
+              | #{post.description}
+            .article
+              | #{post.description}
