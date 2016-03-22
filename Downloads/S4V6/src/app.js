@@ -5,11 +5,16 @@ var express = require('express'),
 
 var app = express();
 
-app.set('view engine', 'jade');
-app.set('views', __dirname + '/templates');
 
+//  Settings  app.set()
+app.set('view engine', 'jade');					// set 'view engine' PARAMETER
+app.set('views', __dirname + '/templates');		//  Views PARAMETER.  Takes folder path to look for template
+												//  __dirname  make sure template path is relative to the file
+
+
+// Routes  app.get(0
 app.get('/', function(req, res){
-	res.render('index');
+	res.render('index');				//  res.render()  <<  Look for JADE FILE
 });
 
 app.get('/blog/:title?', function(req, res){ 
